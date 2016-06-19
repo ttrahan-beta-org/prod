@@ -26,9 +26,16 @@ resources:
     source:
       counter: 2
 
-## Disaster recovery Docker Cloud cluster resource
-#  - name: env-dr-dcl
-#    type: dclCluster
-#    integration: sd-dcl
-#    source:
-#      name : "env-dr-dcl"
+# Disaster recovery Docker Cloud cluster resource
+  - name: env-dr-dcl
+    type: dclCluster
+    integration: sd-dcl
+    source:
+      name : "env-dr-dcl"
+
+# DR env vars for BOX
+  - name: box-dr-params
+    type: params
+    source:
+      params:
+        ENVIRONMENT: "dr-dcl"

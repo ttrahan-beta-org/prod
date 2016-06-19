@@ -1,15 +1,15 @@
 jobs:
-## PROD deployment job for BOX
-#  - name: box-prod-aws
-#    type: ecsDeploy
-#    steps:
-#      - GET: box-test-aws
-#        trigger: false
-#      - GET: box-p-params
-#      - GET: box-p-scaler
-#      - GET: env-prod-aws
-#      - GET: box-p-kick
-#
+# PROD deployment job for BOX
+  - name: box-prod-aws
+    type: ecsDeploy
+    steps:
+      - GET: box-test-aws
+        trigger: false
+      - GET: box-p-params
+      - GET: box-p-scaler
+      - GET: env-prod-aws
+      - GET: box-p-kick
+
 ## DR deployment job for BOX
 #  - name: box-dr-dcl
 #    type: dclDeploy

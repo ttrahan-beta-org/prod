@@ -24,7 +24,7 @@ resources:
   - name: box-p-kick
     type: kickStart
     source:
-      counter: 1
+      counter: 2
 
 ## Disaster recovery Docker Cloud cluster resource
 #  - name: env-dr-dcl

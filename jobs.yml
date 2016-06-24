@@ -10,11 +10,11 @@ jobs:
       - GET: env-prod-aws
       - GET: box-p-kick
 
-# DR deployment job for BOX
-  - name: box-dr-dcl
-    type: dclDeploy
-    steps:
-      - GET: box-test-aws
-        trigger: false
-      - GET: box-dr-params
-      - GET: env-dr-dcl
+## DR deployment job for BOX
+#  - name: box-dr-dcl
+#    type: dclDeploy
+#    steps:
+#      - GET: box-test-aws
+#        trigger: false
+#      - GET: box-dr-params
+#      - GET: env-dr-dcl

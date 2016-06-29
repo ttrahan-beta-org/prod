@@ -4,18 +4,18 @@ jobs:
 
 ################################
 
-# # 5) add deploy config for PROD
-# # BOX JOBS
-# # PROD deployment
-#   - name: box-prod-triton
-#     type: tripubDeploy
-#     steps:
-#       - GET: box-test-triton
-#         trigger: false
-#       - GET: box-p-params
-#       - GET: box-p-scaler
-#       - GET: env-prod-triton
-#       - GET: box-p-kick
+# 5) add deploy config for PROD
+# BOX JOBS
+# PROD deployment
+  - name: box-prod-triton
+    type: tripubDeploy
+    steps:
+      - GET: box-test-triton
+        trigger: false
+      - GET: box-p-params
+      - GET: box-p-scaler
+      - GET: env-prod-triton
+      - GET: box-p-kick
 
 ################################
 

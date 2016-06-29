@@ -4,6 +4,7 @@ resources:
 
 ################################
 
+# 6 add deploy config for PROD
 # BOX RESOURCES
 # PROD env vars for BOX
   - name: box-p-params
@@ -18,12 +19,14 @@ resources:
     source:
       count: 2
 
+# 7) deploy to PROD
 # PROD kickstarter to manually trigger deploys
   - name: box-p-kick
     type: kickStart
     source:
-      counter: 2
+      counter: 1
 
+# 8) deploy to DR
 # DR env vars for BOX
   - name: box-dr-params
     type: params
@@ -33,6 +36,7 @@ resources:
 
 ################################
 
+# 6) add deploy config for PROD
 # PROD env - TRITON CLUSTER
   - name: env-prod-triton
     type: tripubCluster
@@ -41,7 +45,7 @@ resources:
       region: "us-east-1"
 
 ################################
-
+# 8) deploy to DR
 # # DR env - TRITON CLUSTER
 #   - name: env-dr-triton
 #     type: tripubCluster

@@ -3,7 +3,7 @@ jobs:
 # jobs for the box demo pipelines for PROD environment
 
 ################################
-
+# 6)
 # BOX JOBS
 # PROD deployment
   - name: box-prod-triton
@@ -16,6 +16,8 @@ jobs:
       - GET: env-prod-triton
       - GET: box-p-kick
 
+################################
+# 8)
 # # DR deployment
 #   - name: box-prod-triton
 #     type: ecsDeploy

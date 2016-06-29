@@ -11,7 +11,7 @@ resources:
     type: params
     source:
       params:
-        ENVIRONMENT: "prod-aws"
+        ENVIRONMENT: "prod-triton"
 
 # PROD replica controller for BOX
   - name: box-p-scaler
@@ -24,7 +24,7 @@ resources:
   - name: box-p-kick
     type: kickStart
     source:
-      counter: 2
+      counter: 3
 
 # # 7) deploy to DR
 # # DR env vars for BOX

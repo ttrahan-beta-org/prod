@@ -17,7 +17,7 @@ resources:
   - name: box-p-scaler
     type: replicas
     source:
-      count: 1
+      count: 2
 
 # 6) deploy to PROD
 # PROD kickstarter to manually trigger deploys

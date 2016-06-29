@@ -1,12 +1,10 @@
 resources:
-# PROD AWS cluster
-  - name: env-prod-aws
-    type: ecsCluster
-    integration: avi-ecs
-    source:
-      name : "prod-aws"
-      region: "us-east-1"
 
+# resources for the box demo pipelines for PROD environment
+
+################################
+
+# BOX RESOURCES
 # PROD env vars for BOX
   - name: box-p-params
     type: params
@@ -26,16 +24,29 @@ resources:
     source:
       counter: 2
 
-# Disaster recovery Docker Cloud cluster resource
-  - name: env-dr-dcl
-    type: dclCluster
-    integration: sd-dcl
-    source:
-      name : "env-dr-dcl"
-
 # DR env vars for BOX
   - name: box-dr-params
     type: params
     source:
       params:
         ENVIRONMENT: "dr-dcl"
+
+################################
+
+# PROD env - TRITON CLUSTER
+  - name: env-prod-triton
+    type: tripubCluster
+    integration: ttrahan-tpc
+    source:
+      region: "us-east-1"
+
+################################
+
+# # DR env - TRITON CLUSTER
+#   - name: env-dr-triton
+#     type: tripubCluster
+#     integration: ttrahan-tpc
+#     source:
+#       region: "us-west-1"
+
+################################

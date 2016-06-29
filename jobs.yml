@@ -1,20 +1,28 @@
 jobs:
-# PROD deployment job for BOX
-  - name: box-prod-aws
+
+# jobs for the box demo pipelines for PROD environment
+
+################################
+
+# BOX JOBS
+# PROD deployment
+  - name: box-prod-triton
     type: ecsDeploy
     steps:
-      - GET: box-test-aws
+      - GET: box-test-triton
         trigger: false
       - GET: box-p-params
       - GET: box-p-scaler
-      - GET: env-prod-aws
+      - GET: env-prod-triton
       - GET: box-p-kick
 
-# DR deployment job for BOX
-  - name: box-dr-dcl
-    type: dclDeploy
-    steps:
-      - GET: box-test-aws
-        trigger: false
-      - GET: box-dr-params
-      - GET: env-dr-dcl
+# # DR deployment
+#   - name: box-prod-triton
+#     type: ecsDeploy
+#     steps:
+#       - GET: box-test-triton
+#         trigger: false
+#       - GET: box-p-params
+#       - GET: box-p-scaler
+#       - GET: env-prod-triton
+#       - GET: box-p-kick

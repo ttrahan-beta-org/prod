@@ -24,7 +24,7 @@ resources:
   - name: box-p-kick
     type: kickStart
     source:
-      counter: 3
+      counter: 4
 
 # # 7) deploy to DR
 # # DR env vars for BOX

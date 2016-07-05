@@ -26,7 +26,7 @@ jobs:
 #     steps:
 #       - GET: box-test-triton
 #         trigger: false
-#       - GET: box-p-params
+#       - GET: box-d-params
 #       - GET: box-p-scaler
 #       - GET: env-prod-triton
 #       - GET: box-p-kick

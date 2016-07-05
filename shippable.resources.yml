@@ -26,9 +26,18 @@ resources:
     source:
       counter: 6
 
+# 5) add deploy config for DR
+# BOX RESOURCES
+# PROD env vars for BOX
+  - name: box-d-params
+    type: params
+    source:
+      params:
+        ENVIRONMENT: "dr-aws"
+
 # # 7) deploy to DR
 # # DR env vars for BOX
-#   - name: box-dr-params
+#   - name: box-d-params
 #     type: params
 #     source:
 #       params:
@@ -45,12 +54,13 @@ resources:
       region: "us-east-1"
 
 ################################
+
 # 7) deploy to DR
-# # DR env - TRITON CLUSTER
-#   - name: env-dr-triton
-#     type: tripubCluster
-#     integration: ttrahan-tpc
+# # DR env - AWS CLUSTER
+#   - name: env-dr-aws
+#     type: ecsCluster
+#     integration: ttrahan-aws
 #     source:
-#       region: "us-west-1"
+#       region: "us-east-1"
 
 ################################

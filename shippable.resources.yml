@@ -5,6 +5,7 @@ resources:
 ################################
 
 # 5) add deploy config for PROD
+
 # BOX RESOURCES
 # PROD env vars for BOX
   - name: box-p-params
@@ -20,32 +21,26 @@ resources:
       count: 2
 
 # 6) deploy to PROD
+
 # PROD kickstarter to manually trigger deploys
   - name: box-p-kick
     type: kickStart
     source:
       counter: 6
 
-# 5) add deploy config for DR
-# BOX RESOURCES
-# PROD env vars for BOX
+# 7) deploy to DR
+
+# DR env vars for BOX
   - name: box-d-params
     type: params
     source:
       params:
         ENVIRONMENT: "dr-aws"
 
-# # 7) deploy to DR
-# # DR env vars for BOX
-#   - name: box-d-params
-#     type: params
-#     source:
-#       params:
-#         ENVIRONMENT: "dr-triton"
-
 ################################
 
 # 5) add deploy config for PROD
+
 # PROD env - TRITON CLUSTER
   - name: env-prod-triton
     type: tripubCluster
@@ -56,11 +51,13 @@ resources:
 ################################
 
 # 7) deploy to DR
-# # DR env - AWS CLUSTER
-#   - name: env-dr-aws
-#     type: ecsCluster
-#     integration: ttrahan-aws
-#     source:
-#       region: "us-east-1"
+
+# DR env - AWS cluster
+  - name: env-dr-ecs
+    type: ecsCluster
+    integration: ttrahan-aws
+    source:
+      name : "demo-shippable-ecs"
+      region: "us-east-1"
 
 ################################

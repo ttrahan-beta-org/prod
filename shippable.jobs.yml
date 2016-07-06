@@ -5,8 +5,9 @@ jobs:
 ################################
 
 # 5) add deploy config for PROD
+
 # BOX JOBS
-# PROD deployment
+# PROD deployment - Joyent Triton
   - name: box-prod-triton
     type: tripubDeploy
     steps:
@@ -16,6 +17,18 @@ jobs:
       - GET: box-p-scaler
       - GET: env-prod-triton
       - GET: box-p-kick
+
+# PROD deployment - Amazon ECS
+  - name: box-prod-ecs
+    type: ecsDeploy
+    steps:
+      - GET: box-test-ecs
+        trigger: false
+      - GET: box-p-params
+      - GET: box-p-scaler
+      - GET: env-dr-ecs
+      - GET: box-p-kick
+
 
 ################################
 

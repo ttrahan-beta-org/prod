@@ -1,10 +1,10 @@
 triggers:
-  - name: trigger-prod-deploy-dv
-    type: trigger
-    source:
-      message: 'testing trigger in test'
-
+  # - name: trigger-prod-deploy-dv
+  #   type: trigger
+  #   source:
+  #     message: 'testing trigger in test'
+  #
   - name: trigger-prod-deploy-box
     type: trigger
     source:
-      counter: 1
+      counter: 2

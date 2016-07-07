@@ -25,8 +25,8 @@ jobs:
     steps:
       - GET: box-test-ecs
         trigger: false
-      - GET: box-d-params
       - GET: box-p-scaler
+      - GET: box-d-params
       - GET: env-prod-ecs
       - GET: box-p-kick
       - GET: trigger-prod-deploy-box

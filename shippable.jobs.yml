@@ -17,6 +17,7 @@ jobs:
       - GET: box-p-scaler
       - GET: env-prod-triton
       - GET: box-p-kick
+      - GET: trigger-prod-deploy-box
 
 # PROD deployment - Amazon ECS
   - name: box-prod-ecs
@@ -26,20 +27,6 @@ jobs:
         trigger: false
       - GET: box-p-params
       - GET: box-p-scaler
-      - GET: env-dr-ecs
+      - GET: env-prod-ecs
       - GET: box-p-kick
-
-
-################################
-
-# 7) deploy to DR
-# # DR deployment
-#   - name: box-prod-triton
-#     type: ecsDeploy
-#     steps:
-#       - GET: box-test-triton
-#         trigger: false
-#       - GET: box-d-params
-#       - GET: box-p-scaler
-#       - GET: env-prod-triton
-#       - GET: box-p-kick
+      - GET: trigger-prod-deploy-box

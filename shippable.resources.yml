@@ -20,18 +20,10 @@ resources:
     source:
       count: 2
 
-# 6) deploy to PROD
-
-# PROD kickstarter to manually trigger deploys
-  - name: box-p-kick
-    type: kickStart
-    source:
-      counter: 6
-
 # 7) deploy to DR
 
 # DR env vars for BOX
-  - name: box-d-params
+  - name: box-p-ecs-params
     type: params
     source:
       params:

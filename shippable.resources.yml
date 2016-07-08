@@ -28,7 +28,7 @@ resources:
     type: params
     source:
       params:
-        ENVIRONMENT: "prod-aws"
+        ENVIRONMENT: "prod-ecs"
 
 ################################
 

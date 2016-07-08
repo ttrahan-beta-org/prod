@@ -7,4 +7,4 @@ triggers:
   - name: trigger-prod-deploy-box
     type: trigger
     source:
-      counter: 3
+      message: "update prod environment name"

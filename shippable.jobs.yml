@@ -13,7 +13,7 @@ jobs:
     steps:
       - GET: box-test-triton
         trigger: false
-      - GET: box-p-params
+      - GET: box-p-tpc-params
       - GET: box-p-scaler
       - GET: env-prod-triton
       - GET: trigger-prod-deploy-box

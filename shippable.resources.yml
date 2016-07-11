@@ -10,7 +10,7 @@ resources:
   - name: box-p-scaler
     type: replicas
     source:
-      count: 2
+      count: 3
 
 # add PROD resources for Amazon ECS
 
@@ -35,16 +35,16 @@ resources:
 
 # add PROD resources for Joyent Triton
 
-# # PROD env - TRITON CLUSTER
-#   - name: env-prod-triton
-#     type: tripubCluster
-#     integration: ttrahan-tpc
-#     source:
-#       region: "us-east-1"
-#
-# # PROD env vars for BOX
-#   - name: box-p-tpc-params
-#     type: params
-#     source:
-#       params:
-#         ENVIRONMENT: "prod-triton"
+# PROD env - TRITON CLUSTER
+  - name: env-prod-triton
+    type: tripubCluster
+    integration: ttrahan-tpc
+    source:
+      region: "us-east-1"
+
+# PROD env vars for BOX
+  - name: box-p-tpc-params
+    type: params
+    source:
+      params:
+        ENVIRONMENT: "prod-triton"

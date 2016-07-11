@@ -2,7 +2,7 @@ triggers:
   - name: trigger-prod-deploy-box
     type: trigger
     source:
-      message: "deploy to prod - triton"
+      message: "deploy to prod"
 
   - name: trigger-prod-deploy-dv
     type: trigger

@@ -14,18 +14,18 @@ jobs:
     steps:
       - GET: box-test-aws-ecs
         trigger: false
-      - GET: box-p-scaler
       - GET: box-p-ecs-params
+      - GET: box-p-scaler
       - GET: env-prod-ecs
       - GET: trigger-prod-deploy-box
 
-# PROD deployment - Joyent Triton
-  - name: box-prod-triton
-    type: tripubDeploy
-    steps:
-      - GET: box-test-triton
-        trigger: false
-      - GET: box-p-tpc-params
-      - GET: box-p-scaler
-      - GET: env-prod-triton
-      - GET: trigger-prod-deploy-box
+# # PROD deployment - Joyent Triton
+#   - name: box-prod-triton
+#     type: tripubDeploy
+#     steps:
+#       - GET: box-test-triton
+#         trigger: false
+#       - GET: box-p-tpc-params
+#       - GET: box-p-scaler
+#       - GET: env-prod-triton
+#       - GET: trigger-prod-deploy-box

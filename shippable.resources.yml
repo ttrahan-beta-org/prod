@@ -4,15 +4,7 @@ resources:
 
 ################################
 
-# 5) add PROD resources for Amazon ECS
-
-# DR env - AWS cluster
-  - name: env-prod-ecs
-    type: ecsCluster
-    integration: ttrahan-aws
-    source:
-      name : "demo-shippable-ecs"
-      region: "us-east-1"
+# shared resources across environmnents
 
 # PROD replica controller for BOX
   - name: box-p-scaler
@@ -20,18 +12,28 @@ resources:
     source:
       count: 2
 
-# DR env vars for BOX
-  - name: box-p-ecs-params
-    type: params
-    source:
-      params:
-        ENVIRONMENT: "prod-ecs"
+# add PROD resources for Amazon ECS
+
+# # DR env - AWS cluster
+#   - name: env-prod-ecs
+#     type: ecsCluster
+#     integration: ttrahan-aws
+#     source:
+#       name : "demo-shippable-ecs"
+#       region: "us-east-1"
+#
+# # DR env vars for BOX
+#   - name: box-p-ecs-params
+#     type: params
+#     source:
+#       params:
+#         ENVIRONMENT: "prod-ecs"
 
 ################################
 
 # BOX RESOURCES - Triton
 
-# 7) add PROD resources for Joyent Triton
+# add PROD resources for Joyent Triton
 
 # PROD env - TRITON CLUSTER
   - name: env-prod-triton

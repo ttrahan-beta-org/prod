@@ -7,16 +7,17 @@ jobs:
 # 5) add deploy config for PROD
 
 # BOX JOBS
-# PROD deployment - Amazon ECS
-  - name: box-prod-ecs
-    type: ecsDeploy
-    steps:
-      - GET: box-test-aws-ecs
-        trigger: false
-      - GET: box-p-scaler
-      - GET: box-p-ecs-params
-      - GET: env-prod-ecs
-      - GET: trigger-prod-deploy-box
+
+# # PROD deployment - Amazon ECS
+#   - name: box-prod-ecs
+#     type: ecsDeploy
+#     steps:
+#       - GET: box-test-aws-ecs
+#         trigger: false
+#       - GET: box-p-scaler
+#       - GET: box-p-ecs-params
+#       - GET: env-prod-ecs
+#       - GET: trigger-prod-deploy-box
 
 # PROD deployment - Joyent Triton
   - name: box-prod-triton

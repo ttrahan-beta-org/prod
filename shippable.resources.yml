@@ -4,47 +4,47 @@ resources:
 
 ################################
 
-# shared resources across environmnents
-
-# PROD replica controller for BOX
-  - name: box-p-scaler
-    type: replicas
-    source:
-      count: 2
-
-# add PROD resources for Amazon ECS
-
-# DR env - AWS cluster
-  - name: env-prod-ecs
-    type: ecsCluster
-    integration: ttrahan-aws
-    source:
-      name : "demo-shippable-ecs"
-      region: "us-east-1"
-
-# DR env vars for BOX
-  - name: box-p-ecs-params
-    type: params
-    source:
-      params:
-        ENVIRONMENT: "prod-ecs"
+# # shared resources across environmnents
+#
+# # PROD replica controller for BOX
+#   - name: box-p-scaler
+#     type: replicas
+#     source:
+#       count: 2
+#
+# # add PROD resources for Amazon ECS
+#
+# # DR env - AWS cluster
+#   - name: env-prod-ecs
+#     type: ecsCluster
+#     integration: ttrahan-aws
+#     source:
+#       name : "demo-shippable-ecs"
+#       region: "us-east-1"
+#
+# # DR env vars for BOX
+#   - name: box-p-ecs-params
+#     type: params
+#     source:
+#       params:
+#         ENVIRONMENT: "prod-ecs"
 
 ################################
 
-# BOX RESOURCES - Triton
-
-# add PROD resources for Joyent Triton
-
-# PROD env - TRITON CLUSTER
-  - name: env-prod-triton
-    type: tripubCluster
-    integration: ttrahan-tpc
-    source:
-      region: "us-east-1"
-
-# PROD env vars for BOX
-  - name: box-p-tpc-params
-    type: params
-    source:
-      params:
-        ENVIRONMENT: "prod-triton"
+# # BOX RESOURCES - Triton
+#
+# # add PROD resources for Joyent Triton
+#
+# # PROD env - TRITON CLUSTER
+#   - name: env-prod-triton
+#     type: tripubCluster
+#     integration: ttrahan-tpc
+#     source:
+#       region: "us-east-1"
+#
+# # PROD env vars for BOX
+#   - name: box-p-tpc-params
+#     type: params
+#     source:
+#       params:
+#         ENVIRONMENT: "prod-triton"

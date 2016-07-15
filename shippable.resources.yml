@@ -9,7 +9,7 @@ resources:
 # PROD replica controller for BOX
   - name: box-p-scaler
     type: replicas
-    pointer:
+    version:
       count: 2
 
 # add PROD resources for Amazon ECS
@@ -26,7 +26,7 @@ resources:
 # DR env vars for BOX
   - name: box-p-ecs-params
     type: params
-    pointer:
+    version:
       params:
         ENVIRONMENT: "prod-ecs"
 

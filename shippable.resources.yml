@@ -20,7 +20,6 @@ resources:
     integration: ttrahan-aws
     pointer:
       sourceName: "demo-shippable-ecs"
-    version:
       region: "us-east-1"
 
 # DR env vars for BOX
@@ -40,12 +39,12 @@ resources:
 #   - name: env-prod-triton
 #     type: tripubCluster
 #     integration: ttrahan-tpc
-#     pointer:
+#     version:
 #       region: "us-east-1"
 #
 # # PROD env vars for BOX
 #   - name: box-p-tpc-params
 #     type: params
-#     pointer:
+#     version:
 #       params:
 #         ENVIRONMENT: "prod-triton"

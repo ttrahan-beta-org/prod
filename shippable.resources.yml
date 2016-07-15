@@ -6,28 +6,28 @@ resources:
 
 # shared resources across environmnents
 
-# # PROD replica controller for BOX
-#   - name: box-p-scaler
-#     type: replicas
-#     pointer:
-#       count: 2
-#
-# # add PROD resources for Amazon ECS
-#
-# # DR env - AWS cluster
-#   - name: env-prod-ecs
-#     type: ecsCluster
-#     integration: ttrahan-aws
-#     pointer:
-#       sourceName: "demo-shippable-ecs"
-#       region: "us-east-1"
-#
-# # DR env vars for BOX
-#   - name: box-p-ecs-params
-#     type: params
-#     pointer:
-#       params:
-#         ENVIRONMENT: "prod-ecs"
+# PROD replica controller for BOX
+  - name: box-p-scaler
+    type: replicas
+    pointer:
+      count: 2
+
+# add PROD resources for Amazon ECS
+
+# DR env - AWS cluster
+  - name: env-prod-ecs
+    type: ecsCluster
+    integration: ttrahan-aws
+    pointer:
+      sourceName: "demo-shippable-ecs"
+      region: "us-east-1"
+
+# DR env vars for BOX
+  - name: box-p-ecs-params
+    type: params
+    pointer:
+      params:
+        ENVIRONMENT: "prod-ecs"
 
 ################################
 

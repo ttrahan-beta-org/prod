@@ -9,7 +9,7 @@ resources:
 # PROD replica controller for BOX
   - name: box-p-scaler
     type: replicas
-    source:
+    pointer:
       count: 2
 
 # add PROD resources for Amazon ECS
@@ -18,14 +18,14 @@ resources:
   - name: env-prod-ecs
     type: ecsCluster
     integration: ttrahan-aws
-    source:
-      name : "demo-shippable-ecs"
+    pointer:
+      sourceName: "demo-shippable-ecs"
       region: "us-east-1"
 
 # DR env vars for BOX
   - name: box-p-ecs-params
     type: params
-    source:
+    pointer:
       params:
         ENVIRONMENT: "prod-ecs"
 
@@ -39,12 +39,12 @@ resources:
 #   - name: env-prod-triton
 #     type: tripubCluster
 #     integration: ttrahan-tpc
-#     source:
+#     pointer:
 #       region: "us-east-1"
 #
 # # PROD env vars for BOX
 #   - name: box-p-tpc-params
 #     type: params
-#     source:
+#     pointer:
 #       params:
 #         ENVIRONMENT: "prod-triton"

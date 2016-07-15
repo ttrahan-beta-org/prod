@@ -20,6 +20,7 @@ resources:
     integration: ttrahan-aws
     pointer:
       sourceName: "demo-shippable-ecs"
+    version:
       region: "us-east-1"
 
 # DR env vars for BOX

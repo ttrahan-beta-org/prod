@@ -6,11 +6,11 @@ resources:
 
 # shared resources across environmnents
 
-# # PROD replica controller for BOX
-#   - name: box-p-scaler
-#     type: replicas
-#     pointer:
-#       count: 2
+# PROD replica controller for BOX
+  - name: box-p-scaler
+    type: replicas
+    pointer:
+      count: 2
 #
 # # add PROD resources for Amazon ECS
 #

@@ -1,10 +1,10 @@
 triggers:
-  - name: trigger-prod-deploy-box
-    type: trigger
-    pointer:
-      message: "deploy to prod 3"
-
-  - name: trigger-prod-deploy-dv
-    type: trigger
-    pointer:
-      message: 'testing trigger in test'
+  # - name: trigger-prod-deploy-box
+  #   type: trigger
+  #   pointer:
+  #     message: "deploy to prod 3"
+  #
+  # - name: trigger-prod-deploy-dv
+  #   type: trigger
+  #   pointer:
+  #     message: 'testing trigger in test'

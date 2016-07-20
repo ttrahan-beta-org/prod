@@ -20,13 +20,13 @@ jobs:
 #       - IN: trigger-prod-deploy-box
 #       - TASK: managed
 
-# # PROD deployment - Joyent Triton
-#   - name: box-prod-triton
-#     type: tripubDeploy
-#     steps:
-#       - IN: box-test-triton
-#         trigger: false
-#       - IN: box-p-tpc-params
-#       - IN: box-p-scaler
-#       - IN: env-prod-triton
-#       - IN: trigger-prod-deploy-box
+# PROD deployment - Joyent Triton
+  - name: box-prod-triton
+    type: tripubDeploy
+    steps:
+      - IN: box-test-triton
+        trigger: false
+      - IN: box-p-tpc-params
+      - IN: box-p-scaler
+      - IN: env-prod-triton
+      - IN: trigger-prod-deploy-box

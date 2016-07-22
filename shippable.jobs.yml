@@ -8,25 +8,25 @@ jobs:
 
 # BOX JOBS
 
-# # PROD deployment - Amazon ECS
-#   - name: box-prod-ecs
-#     type: ecsDeploy
-#     steps:
-#       - IN: box-test-aws-ecs
-#         trigger: false
-#       - IN: box-p-scaler
-#       - IN: box-p-ecs-params
-#       - IN: env-prod-ecs
-#       - IN: trigger-prod-deploy-box
-#       - TASK: managed
-
-# PROD deployment - Joyent Triton
-  - name: box-prod-triton
-    type: tripubDeploy
+# PROD deployment - Amazon ECS
+  - name: box-prod-ecs
+    type: ecsDeploy
     steps:
-      - IN: box-test-triton
+      - IN: box-test-aws-ecs
         trigger: false
-      - IN: box-p-tpc-params
       - IN: box-p-scaler
-      - IN: env-prod-triton
+      - IN: box-p-ecs-params
+      - IN: env-prod-ecs
       - IN: trigger-prod-deploy-box
+      - TASK: managed
+
+# # PROD deployment - Joyent Triton
+#   - name: box-prod-triton
+#     type: tripubDeploy
+#     steps:
+#       - IN: box-test-triton
+#         trigger: false
+#       - IN: box-p-tpc-params
+#       - IN: box-p-scaler
+#       - IN: env-prod-triton
+#       - IN: trigger-prod-deploy-box

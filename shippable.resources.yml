@@ -19,8 +19,8 @@ resources:
     type: cluster
     integration: ttrahan-aws
     pointer:
-      sourceName: "demo-shippable-ecs"
       region: "us-east-1"
+      sourceName: "demo-shippable-ecs"
 
 # DR env vars for BOX
   - name: box-p-ecs-params

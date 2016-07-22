@@ -14,9 +14,10 @@ jobs:
     steps:
       - IN: box-test-aws-ecs
         trigger: false
+        versionName:
       - IN: box-p-ecs-params
-      - IN: env-prod-ecs
       - IN: box-p-scaler
+      - IN: env-prod-ecs
       - IN: trigger-prod-deploy-box
       - TASK: managed
 

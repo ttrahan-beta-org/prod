@@ -12,9 +12,9 @@ jobs:
   - name: box-prod-ecs
     type: ecsDeploy
     steps:
-      - IN: box-test-aws-ecs
+      - IN: demo-rel
         trigger: false
-        versionName:
+        versionName: 1.0.0
       - IN: box-p-ecs-params
       - IN: box-p-scaler
       - IN: env-prod-ecs

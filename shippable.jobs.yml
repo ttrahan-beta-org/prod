@@ -14,7 +14,7 @@ jobs:
     steps:
       - IN: demo-rel
         trigger: false
-        versionName: 1.0.0
+        versionName: v1.0.1
       - IN: box-p-ecs-params
       - IN: box-p-scaler
       - IN: env-prod-ecs

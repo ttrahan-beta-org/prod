@@ -12,6 +12,11 @@ resources:
     version:
       count: 2
 
+  - name: dv-p-scaler
+    type: replicas
+    version:
+      count: 1
+
 # add PROD resources for Amazon ECS
 
 # DR env - AWS cluster
@@ -28,6 +33,14 @@ resources:
     version:
       params:
         ENVIRONMENT: "prod-ecs"
+
+# DR env vars for BOX
+  - name: dv-p-ecs-params
+    type: params
+    version:
+      params:
+        ENVIRONMENT: "https://api.mlab.com/api/1/databases/box-pipev2/collections/boxes?apiKey=6Q_DxNm5eS5lrKc39KTILq_bpfq19L91"
+
 
 ################################
 

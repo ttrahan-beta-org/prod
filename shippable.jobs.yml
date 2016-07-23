@@ -14,7 +14,7 @@ jobs:
     steps:
       - IN: demo-rel
         trigger: false
-        versionNumber: 29926
+        versionName: v1.0.1
       - IN: box-p-ecs-params
       - IN: box-p-scaler
       - IN: env-prod-ecs

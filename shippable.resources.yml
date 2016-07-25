@@ -1,6 +1,6 @@
 resources:
 
-# resources for the box demo pipelines for PROD environment
+# resources for box demo for PROD environment
 
 ################################
 
@@ -24,8 +24,8 @@ resources:
     type: cluster
     integration: ttrahan-aws
     pointer:
-      region: "us-east-1"
       sourceName: "demo-shippable-ecs"
+      region: "us-east-1"
 
 # DR env vars for BOX
   - name: box-p-ecs-params

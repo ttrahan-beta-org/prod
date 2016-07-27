@@ -12,9 +12,11 @@ jobs:
   - name: box-prod-ecs
     type: ecsDeploy
     steps:
-      - IN: demo-rel
+      # - IN: demo-rel
+      #   trigger: false
+      #   versionName: v1.0.2
+      - IN: box-test-ecs
         trigger: false
-        versionName: v1.0.2
       - IN: box-p-ecs-params
       - IN: box-p-scaler
       - IN: env-prod-ecs
@@ -25,9 +27,11 @@ jobs:
   - name: dv-prod-ecs
     type: ecsDeploy
     steps:
-      - IN: demo-rel
+      # - IN: demo-rel
+      #   trigger: false
+      #   versionName: v1.0.2
+      - IN: dv-test-ecs
         trigger: false
-        versionName: v1.0.2
       - IN: dv-p-ecs-params
       - IN: dv-p-scaler
       - IN: env-prod-ecs

@@ -27,7 +27,7 @@ jobs:
     steps:
       - IN: demo-rel
         trigger: false
-        versionName: v1.0.1
+        versionName: v1.0.2
       - IN: dv-p-ecs-params
       - IN: dv-p-scaler
       - IN: env-prod-ecs

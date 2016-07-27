@@ -8,7 +8,7 @@ jobs:
 
 # BOX JOBS
 
-PROD deployment - Amazon ECS
+# PROD deployment - Amazon ECS
   - name: box-prod-ecs
     type: deploy
     steps:

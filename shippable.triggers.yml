@@ -7,4 +7,4 @@ triggers:
   - name: trigger-prod-deploy-dv
     type: trigger
     version:
-      message: 'deploy dv to prod ecs'
+      message: 'deploy dv to prod'

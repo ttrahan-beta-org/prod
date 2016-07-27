@@ -39,7 +39,7 @@ resources:
     type: params
     version:
       params:
-        ENVIRONMENT: "https://api.mlab.com/api/1/databases/box-pipev2/collections/boxes?apiKey=6Q_DxNm5eS5lrKc39KTILq_bpfq19L91"
+        MONGO_API_URL: "https://api.mlab.com/api/1/databases/box-pipev2/collections/boxes?apiKey=6Q_DxNm5eS5lrKc39KTILq_bpfq19L91"
 
 
 ################################

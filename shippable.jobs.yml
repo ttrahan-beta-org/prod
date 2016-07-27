@@ -23,22 +23,6 @@ jobs:
       - IN: trigger-prod-deploy-box
       - TASK: managed
 
-# PROD deployment - Amazon ECS
-  - name: dv-prod-ecs
-    type: ecsDeploy
-    steps:
-      # - IN: demo-rel
-      #   trigger: false
-      #   versionName: v1.0.2
-      - IN: dv-test-ecs
-        trigger: false
-      - IN: dv-p-ecs-params
-      - IN: dv-p-scaler
-      - IN: env-prod-ecs
-      - IN: trigger-prod-deploy-dv
-      - TASK: managed
-
-
 # # PROD deployment - Joyent Triton
 #   - name: box-prod-triton
 #     type: tripubDeploy

@@ -10,7 +10,7 @@ jobs:
 
 # # PROD deployment - Amazon ECS
 #   - name: box-prod-ecs
-#     type: ecsDeploy
+#     type: deploy
 #     steps:
 #       - IN: box-test-aws-ecs
 #         trigger: false
@@ -22,7 +22,7 @@ jobs:
 
 # PROD deployment - Joyent Triton
   - name: box-prod-triton
-    type: tripubDeploy
+    type: deploy
     steps:
       - IN: box-test-triton
         trigger: false

@@ -37,7 +37,7 @@ resources:
   - name: env-prod-triton
     type: cluster
     integration: ttrahan-tpc
-    version:
+    pointer:
       region: "us-east-1"
 
 # PROD env vars for BOX

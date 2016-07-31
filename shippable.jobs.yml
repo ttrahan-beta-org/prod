@@ -27,7 +27,7 @@ jobs:
   - name: box-prod-triton
     type: deploy
     steps:
-      - IN: box-test-tpc
+      - IN: box-test-triton
         trigger: false
       - IN: box-p-scaler
       - IN: box-p-tpc-params

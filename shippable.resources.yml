@@ -1,4 +1,4 @@
-resources:
+atom resources:
 
 # resources for box demo for PROD environment
 
@@ -12,20 +12,20 @@ resources:
     version:
       count: 2
 
-# # DR env - AWS cluster
-#   - name: env-prod-ecs
-#     type: cluster
-#     integration: ttrahan-aws
-#     pointer:
-#       sourceName: "demo-shippable-ecs"
-#       region: "us-east-1"
+# DR env - AWS cluster
+  - name: env-prod-ecs
+    type: cluster
+    integration: ttrahan-aws
+    pointer:
+      sourceName: "demo-shippable-ecs"
+      region: "us-east-1"
 
-# # DR env vars for BOX
-#   - name: box-p-ecs-params
-#     type: params
-#     version:
-#       params:
-#         ENVIRONMENT: "prod-ecs"
+# DR env vars for BOX
+  - name: box-p-ecs-params
+    type: params
+    version:
+      params:
+        ENVIRONMENT: "prod-ecs"
 
 ################################
 
@@ -33,16 +33,16 @@ resources:
 
 # add PROD resources for Joyent Triton
 
-# PROD env - TRITON CLUSTER
-  - name: env-prod-triton
-    type: cluster
-    integration: ttrahan-tpc
-    pointer:
-      region: "us-east-1"
-
-# PROD env vars for BOX
-  - name: box-p-tpc-params
-    type: params
-    version:
-      params:
-        ENVIRONMENT: "prod-triton"
+# # PROD env - TRITON CLUSTER
+#   - name: env-prod-triton
+#     type: cluster
+#     integration: ttrahan-tpc
+#     pointer:
+#       region: "us-east-1"
+#
+# # PROD env vars for BOX
+#   - name: box-p-tpc-params
+#     type: params
+#     version:
+#       params:
+#         ENVIRONMENT: "prod-triton"

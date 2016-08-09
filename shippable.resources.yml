@@ -10,7 +10,7 @@ atom resources:
   - name: box-p-scaler
     type: replicas
     version:
-      count: 2
+      count: 1
 
 # DR env - AWS cluster
   - name: env-prod-ecs

@@ -30,7 +30,6 @@ atom resources:
 ################################
 
 # BOX RESOURCES - Triton
-
 # add PROD resources for Joyent Triton
 
 # # PROD env - TRITON CLUSTER

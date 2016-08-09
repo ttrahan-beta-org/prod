@@ -16,7 +16,7 @@ jobs:
       #   trigger: false
       #   versionName: v1.0.2
       - IN: box-test-ecs
-        switch: false
+        switch: off
       - IN: box-p-ecs-params
       - IN: env-prod-ecs
       - IN: box-p-scaler

@@ -20,12 +20,26 @@ resources:
       sourceName: "demo-shippable-ecs"
       region: "us-east-1"
 
+# DR env - AWS cluster
+  - name: env-prod-ddc
+    type: cluster
+    integration: ttrahan-aws
+    pointer:
+      region: "us-east-1"
+
 # DR env vars for BOX
   - name: box-p-ecs-params
     type: params
     version:
       params:
         ENVIRONMENT: "prod-ecs"
+
+# DR env vars for BOX
+  - name: box-p-ddc-params
+    type: params
+    version:
+      params:
+        ENVIRONMENT: "prod-ddc"
 
 ################################
 

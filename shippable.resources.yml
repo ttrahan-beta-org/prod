@@ -10,7 +10,7 @@ resources:
   - name: box-p-scaler
     type: replicas
     version:
-      count: 1
+      count: 2
 
 # DR env - AWS cluster
   - name: env-prod-ecs

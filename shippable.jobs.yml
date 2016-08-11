@@ -23,20 +23,20 @@ jobs:
       - IN: trigger-prod-deploy-box
       - TASK: managed
 
-# PROD deployment - Amazon ECS
-  - name: box-prod-ddc
-    type: deploy
-    steps:
-      # - IN: demo-rel
-      #   trigger: false
-      #   versionName: v1.0.2
-      - IN: box-test-ddc
-        switch: off
-      - IN: box-p-ddc-params
-      - IN: env-prod-ddc
-      - IN: box-p-scaler
-      - IN: trigger-prod-deploy-box
-      - TASK: managed
+# # PROD deployment - Amazon ECS
+#   - name: box-prod-ddc
+#     type: deploy
+#     steps:
+#       # - IN: demo-rel
+#       #   trigger: false
+#       #   versionName: v1.0.2
+#       - IN: box-test-ddc
+#         switch: off
+#       - IN: box-p-ddc-params
+#       - IN: env-prod-ddc
+#       - IN: box-p-scaler
+#       - IN: trigger-prod-deploy-box
+#       - TASK: managed
 
 
 # # PROD deployment - Joyent Triton

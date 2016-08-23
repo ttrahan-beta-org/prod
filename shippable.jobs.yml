@@ -13,7 +13,7 @@ jobs:
     type: deploy
     steps:
       - IN: demo-rel
-        trigger: false
+        switch: off
         versionName: v1.0.0
       # - IN: box-test-ecs
       #   switch: off

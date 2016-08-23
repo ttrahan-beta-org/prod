@@ -12,11 +12,11 @@ jobs:
   - name: box-prod-ecs
     type: deploy
     steps:
-      # - IN: demo-rel
-      #   trigger: false
-      #   versionName: v1.0.2
-      - IN: box-test-ecs
-        switch: off
+      - IN: demo-rel
+        trigger: false
+        versionName: v1.0.0
+      # - IN: box-test-ecs
+      #   switch: off
       - IN: box-p-ecs-params
       - IN: env-prod-ecs
       - IN: box-p-scaler

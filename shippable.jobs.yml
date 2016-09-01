@@ -8,20 +8,20 @@ jobs:
 
 # BOX JOBS
 
-# PROD deployment - Amazon ECS
-  - name: box-prod-ecs
-    type: deploy
-    steps:
-      - IN: demo-rel-box-rc
-        switch: off
-        versionName: v1.0.0-rc
-      - IN: box-p-ecs-params
-      - IN: env-prod-ecs
-      - IN: box-p-scaler
-      - IN: trigger-prod-deploy-box
-      - TASK: managed
-
 # # PROD deployment - Amazon ECS
+#   - name: box-prod-ecs
+#     type: deploy
+#     steps:
+#       - IN: demo-rel-box-rc
+#         switch: off
+#         versionName: v1.0.0-rc
+#       - IN: box-p-ecs-params
+#       - IN: env-prod-ecs
+#       - IN: box-p-scaler
+#       - IN: trigger-prod-deploy-box
+#       - TASK: managed
+
+# # PROD deployment - Docker Datacenter
 #   - name: box-prod-ddc
 #     type: deploy
 #     steps:
@@ -38,12 +38,14 @@ jobs:
 
 
 # # PROD deployment - Joyent Triton
-#   - name: box-prod-triton
-#     type: deploy
-#     steps:
-#       - IN: box-test-triton
-#         trigger: false
-#       - IN: box-p-tpc-params
-#       - IN: box-p-scaler
-#       - IN: env-prod-triton
-#       - IN: trigger-prod-deploy-box
+  - name: box-prod-triton
+    type: deploy
+    steps:
+      - IN: demo-rel-box-rc
+        switch: off
+        versionName: v1.0.0-rc
+      - IN: box-p-tpc-params
+      - IN: env-prod-triton
+      - IN: box-p-scaler
+      - IN: trigger-prod-deploy-box
+      - TASK: managed

@@ -6,67 +6,56 @@ resources:
 
 # shared resources across environmnents
 
-# increment release version - DEMO APP
-  - name: demo-ver
-    type: version
-    steps:
-      - IN: demo-rel-box
-        switch: off
-      - IN: demo-rel-dv
-        switch: off
-      - TASK: managed
-        bump: patch
-
 # PROD replica controller for BOX
   - name: box-p-scaler
     type: replicas
     version:
       count: 2
 
-# DR env - AWS cluster
-  - name: env-prod-ecs
-    type: cluster
-    integration: ttrahan-aws
-    pointer:
-      sourceName: "demo-shippable-ecs"
-      region: "us-east-1"
+# # DR env - AWS cluster
+#   - name: env-prod-ecs
+#     type: cluster
+#     integration: ttrahan-aws
+#     pointer:
+#       sourceName: "demo-shippable-ecs"
+#       region: "us-east-1"
 
-# DR env - AWS cluster
-  - name: env-prod-ddc
-    type: cluster
-    integration: ttrahan-aws
-    pointer:
-      region: "us-east-1"
+# # DR env - AWS cluster
+#   - name: env-prod-ddc
+#     type: cluster
+#     integration: ttrahan-aws
+#     pointer:
+#       region: "us-east-1"
 
-# DR env vars for BOX
-  - name: box-p-ecs-params
-    type: params
-    version:
-      params:
-        ENVIRONMENT: "prod-ecs"
+# # DR env vars for BOX
+#   - name: box-p-ecs-params
+#     type: params
+#     version:
+#       params:
+#         ENVIRONMENT: "prod-ecs"
 
-# DR env vars for BOX
-  - name: box-p-ddc-params
-    type: params
-    version:
-      params:
-        ENVIRONMENT: "prod-ddc"
+# # DR env vars for BOX
+#   - name: box-p-ddc-params
+#     type: params
+#     version:
+#       params:
+#         ENVIRONMENT: "prod-ddc"
 
 ################################
 
 # BOX RESOURCES - Triton
 # add PROD resources for Joyent Triton
 
-# # PROD env - TRITON CLUSTER
-#   - name: env-prod-triton
-#     type: cluster
-#     integration: ttrahan-tpc
-#     pointer:
-#       region: "us-east-1"
-#
-# # PROD env vars for BOX
-#   - name: box-p-tpc-params
-#     type: params
-#     version:
-#       params:
-#         ENVIRONMENT: "prod-triton"
+# PROD env - TRITON CLUSTER
+  - name: env-prod-triton
+    type: cluster
+    integration: ttrahan-tpc
+    pointer:
+      region: "us-east-1"
+
+# PROD env vars for BOX
+  - name: box-p-tpc-params
+    type: params
+    version:
+      params:
+        ENVIRONMENT: "prod-triton"

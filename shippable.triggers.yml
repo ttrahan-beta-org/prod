@@ -2,7 +2,7 @@ triggers:
   - name: trigger-prod-deploy-box
     type: trigger
     version:
-      message: "deploy box v1.0.2-rc to prod"
+      message: "deploy box v1.0.0-rc to prod"
 
   - name: trigger-prod-deploy-dv
     type: trigger

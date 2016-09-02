@@ -43,7 +43,7 @@ jobs:
     steps:
       - IN: demo-rel-box-rc
         switch: off
-        versionName: v1.0.0-rc
+        versionName: v1.0.1-rc
       - IN: box-p-tpc-params
       - IN: env-prod-triton
       - IN: box-p-scaler

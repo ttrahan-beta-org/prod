@@ -1,6 +1,6 @@
 resources:
 
-# resources for the box demo pipelines for PROD environment
+# resources for box demo for PROD environment
 
 ################################
 
@@ -12,14 +12,19 @@ resources:
     version:
       count: 2
 
-# add PROD resources for Amazon ECS
-
 # # DR env - AWS cluster
 #   - name: env-prod-ecs
 #     type: cluster
 #     integration: ttrahan-aws
 #     pointer:
 #       sourceName: "demo-shippable-ecs"
+#       region: "us-east-1"
+
+# # DR env - AWS cluster
+#   - name: env-prod-ddc
+#     type: cluster
+#     integration: ttrahan-aws
+#     pointer:
 #       region: "us-east-1"
 
 # # DR env vars for BOX
@@ -29,17 +34,23 @@ resources:
 #       params:
 #         ENVIRONMENT: "prod-ecs"
 
+# # DR env vars for BOX
+#   - name: box-p-ddc-params
+#     type: params
+#     version:
+#       params:
+#         ENVIRONMENT: "prod-ddc"
+
 ################################
 
 # BOX RESOURCES - Triton
-
 # add PROD resources for Joyent Triton
 
 # PROD env - TRITON CLUSTER
   - name: env-prod-triton
     type: cluster
     integration: ttrahan-tpc
-    version:
+    pointer:
       region: "us-east-1"
 
 # PROD env vars for BOX

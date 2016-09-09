@@ -12,29 +12,39 @@ resources:
     version:
       count: 2
 
-# # DR env - AWS cluster
-#   - name: env-prod-ecs
-#     type: cluster
-#     integration: ttrahan-aws
-#     pointer:
-#       sourceName: "demo-shippable-ecs"
-#       region: "us-east-1"
+################################
 
-# # DR env - AWS cluster
+# BOX RESOURCES - Amazon ECS
+# add PROD resources for Amazon ECS
+
+# DR env - AWS cluster
+  - name: env-prod-ecs
+    type: cluster
+    integration: ttrahan-aws
+    pointer:
+      sourceName: "demo-shippable-ecs"
+      region: "us-east-1"
+
+# DR env vars for BOX
+  - name: box-p-ecs-params
+    type: params
+    version:
+      params:
+        ENVIRONMENT: "prod-ecs"
+
+################################
+
+# BOX RESOURCES - Docker Datacenter
+# add PROD resources for Docker Datacenter
+
+# # DR env - Docker Datacenter
 #   - name: env-prod-ddc
 #     type: cluster
-#     integration: ttrahan-aws
+#     integration: ttrahan-ddc
 #     pointer:
 #       region: "us-east-1"
 
-# # DR env vars for BOX
-#   - name: box-p-ecs-params
-#     type: params
-#     version:
-#       params:
-#         ENVIRONMENT: "prod-ecs"
-
-# # DR env vars for BOX
+# # DR env vars for BOX - Docker Datacenter
 #   - name: box-p-ddc-params
 #     type: params
 #     version:

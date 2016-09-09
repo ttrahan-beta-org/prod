@@ -8,18 +8,17 @@ jobs:
 
 # BOX JOBS
 
-# # PROD deployment - Amazon ECS
-#   - name: box-prod-ecs
-#     type: deploy
-#     steps:
-#       - IN: demo-rel-box-rc
-#         switch: off
-#         versionName: v1.0.0-rc
-#       - IN: box-p-ecs-params
-#       - IN: env-prod-ecs
-#       - IN: box-p-scaler
-#       - IN: trigger-prod-deploy-box
-#       - TASK: managed
+# PROD deployment - Amazon ECS
+  - name: box-prod-ecs
+    type: deploy
+    steps:
+      - IN: box-test-ecs
+        switch: off
+      - IN: box-p-ecs-params
+      - IN: env-prod-ecs
+      - IN: box-p-scaler
+      - IN: trigger-prod-deploy-box
+      - TASK: managed
 
 # # PROD deployment - Docker Datacenter
 #   - name: box-prod-ddc
